@@ -4,13 +4,13 @@
 
 Your task is to build a backend application that acts as a RESTful API Server for displaying random quotes. 
 
-Application must be written using the tools listed below:
+The application should be written using the tools listed below:
 
 Tech Stack: [Nest.js](https://nestjs.com/) and [TypeScript](https://www.typescriptlang.org/)
 
 ## Getting Started
 
-The NestJS starter code and quote file can be found in our random-quote-generator GitHub repository
+The NestJS starter code and quote file can be found in our random-quote-generator GitHub repository.
 The [NestJS First Steps](https://docs.nestjs.com/first-steps) documents are a great launching point to begin building this.
 
 ## What We Expect From You
