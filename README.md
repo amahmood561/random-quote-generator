@@ -14,7 +14,7 @@ The NestJS starter code and quote file can be found in our random-quote-generato
 The [NestJS First Steps](https://docs.nestjs.com/first-steps) documents are a great launching point to begin building this.
 
 ## What We Expect From You
-1. Create an application that creates and uses a RESTFUL API to retrieve and display a random quote from the given ‘office-quotes’ dataset. This application does not need to be deployed or hosted anywhere- just something you can run locally.
+1. Create an application that creates and uses a RESTful API to retrieve and display a random quote from the given ‘office-quotes’ dataset. This application does not need to be deployed or hosted anywhere- just something you can run locally.
 2. Add tests to your newly created application.
 3. Add any additional feature of your choice.
 4. Update the README with any information you want to include that will help us understand and run your project.
