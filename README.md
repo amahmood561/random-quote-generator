@@ -4,17 +4,15 @@
 
 Your task is to build a backend application that acts as a RESTful API Server for displaying random quotes. 
 
-The application should be written using the tools listed below:
-
-Tech Stack: [Nest.js](https://nestjs.com/) and [TypeScript](https://www.typescriptlang.org/)
+The application should be written using [NestJS](https://nestjs.com/) and [TypeScript](https://www.typescriptlang.org/)
 
 ## Getting Started
 
-The NestJS starter code and quote file can be found in our random-quote-generator GitHub repository.
+The NestJS starter code and [quotes file](https://github.com/VioletLabsInc/random-quote-generator/blob/master/src/data/office_quotes.json) can be found in our random-quote-generator GitHub repository. 
 The [NestJS First Steps](https://docs.nestjs.com/first-steps) documents are a great launching point to begin building this.
 
 ## What We Expect From You
-1. Create an application that creates and uses a RESTful API to retrieve and display a random quote from the given ‘office-quotes’ dataset. This application does not need to be deployed or hosted anywhere- just something you can run locally.
+1. Create an application that creates and uses a RESTful API to retrieve and display a random quote from the given [office-quotes](https://github.com/VioletLabsInc/random-quote-generator/blob/master/src/data/office_quotes.json) dataset. This application does not need to be deployed or hosted anywhere- just something you can run locally.
 2. Add tests to your newly created application.
 3. Add any additional feature of your choice.
 4. Update the README with any information you want to include that will help us understand and run your project.
@@ -22,7 +20,7 @@ The [NestJS First Steps](https://docs.nestjs.com/first-steps) documents are a gr
 
 ## Need Help?
 
-Feel free to consult any Nest.js or TypeScript documentation as necessary. For any other further questions or issues that arise, reach out to your hiring manager.
+Feel free to consult any NestJS or TypeScript documentation as necessary. For any other further questions or issues that arise, reach out to your hiring manager.
 
 ## Time Estimate
 
