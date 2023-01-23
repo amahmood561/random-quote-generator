@@ -1,12 +1,18 @@
-import { Controller, Get } from '@nestjs/common';
-import { AppService } from './app.service';
+import { Controller, Get, Post } from '@nestjs/common';
+import { QuotesService } from './app.service.quote';
+import { Quote } from './entity/quote.entity';
 
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) {}
+  constructor(private readonly quotesService: QuotesService) {}
 
   @Get()
-  getHello(): string {
-    return this.appService.getHello();
+  async getRandomQuote(): Promise<Quote> {
+    return this.quotesService.getRandomQuote();
+  }
+
+  @Post('/seed')
+  async seed(): Promise<string> {
+    return this.quotesService.seed();
   }
 }

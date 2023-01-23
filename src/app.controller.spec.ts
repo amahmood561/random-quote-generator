@@ -1,22 +1,54 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { QuotesService } from './app.service.quote';
+import { Quote } from './entity/quote.entity';
+
 
 describe('AppController', () => {
+  let module: TestingModule;
   let appController: AppController;
+  let quotesService: QuotesService;
 
-  beforeEach(async () => {
-    const app: TestingModule = await Test.createTestingModule({
+  let result: Quote = {
+    'quote_id': 1704,
+    'quote': 'We need a new manager.',
+    'character': 'Pam',
+  };
+
+  const mockQuotesService = {
+    getRandomQuote: async () => {
+      return result;
+    },
+  };
+
+  const quoteServiceProvider = {
+    provide: QuotesService,
+    useValue: mockQuotesService,
+  };
+
+  beforeAll(async () => {
+    module = await Test.createTestingModule({
       controllers: [AppController],
-      providers: [AppService],
+      providers: [quoteServiceProvider],
     }).compile();
 
-    appController = app.get<AppController>(AppController);
+    quotesService = module.get<QuotesService>(QuotesService);
+    appController = module.get<AppController>(AppController);
   });
 
-  describe('root', () => {
-    it('should return "Hello World!"', () => {
-      expect(appController.getHello()).toBe('Hello World!');
+  describe('getRandomQuote', () => {
+    it('should return random quote test coverage', async () => {
+      let result: Quote = {
+        'quote_id': 1704,
+        'quote': 'We need a new manager.',
+        'character': 'Pam',
+      };
+
+      jest.spyOn(quotesService, 'getRandomQuote').mockImplementation(async () => {
+        return result;
+      });
+
+      expect(await appController.getRandomQuote()).toBe(result);
     });
   });
 });
